@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "WIP Youtube Fix",
+    "description": "Fix the recent youtube changes in cinema mode.",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": ["https://www.youtube.com/*"],
+            "css": ["yt-fix.css"],
+            "js": ["yt-fix.js"]
+        }
+    ]
+}
